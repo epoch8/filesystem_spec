@@ -340,7 +340,6 @@ class WholeFileCacheFileSystem(CachingFileSystem):
                 protocol = self.protocol[0]
             else:
                 protocol = self.protocol
-            
             path = protocol + "://" + path
         if mode != "rb":
             return self.fs._open(path, mode=mode, **kwargs)
